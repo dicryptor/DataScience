@@ -1,3 +1,4 @@
+import data as data
 import matplotlib.pyplot as plt
 from sklearn import datasets, svm, metrics
 
