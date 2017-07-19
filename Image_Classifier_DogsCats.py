@@ -46,12 +46,12 @@ from keras import backend as K
 # dimensions of our images.
 img_width, img_height = 150, 150
 
-train_data_dir = 'data/train'
-validation_data_dir = 'data/validation'
-nb_train_samples = 2000
-nb_validation_samples = 800
+train_data_dir = 'simpsons/train'
+validation_data_dir = 'simpsons/validation'
+nb_train_samples = 1000
+nb_validation_samples = 340
 epochs = 50
-batch_size = 16
+batch_size = 10
 
 if K.image_data_format() == 'channels_first':
     input_shape = (3, img_width, img_height)
@@ -112,4 +112,4 @@ model.fit_generator(
     validation_data=validation_generator,
     validation_steps=nb_validation_samples // batch_size)
 
-model.save_weights('first_try.h5')
+model.save_weights('simpsons_first_try.h5')
