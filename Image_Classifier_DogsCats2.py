@@ -44,13 +44,14 @@ from keras import applications
 # dimensions of our images.
 img_width, img_height = 150, 150
 
-top_model_weights_path = 'bottleneck_fc_model.h5'
-train_data_dir = 'simpsons/train'
-validation_data_dir = 'simpsons/validation'
+top_model_weights_path = 'bottleneck_fc_model_weights.h5'
+top_model_path = 'bottleneck_fc_model.h5'
+train_data_dir = 'data/train'
+validation_data_dir = 'data/validation'
 nb_train_samples = 1000
-nb_validation_samples = 340
-epochs = 50
-batch_size = 10
+nb_validation_samples = 400
+epochs = 100
+batch_size = 20
 
 
 def save_bottlebeck_features():
