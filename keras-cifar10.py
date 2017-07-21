@@ -7,7 +7,7 @@ from keras.layers import Conv2D, MaxPooling2D
 
 batch_size = 32
 num_classes = 10
-epochs = 2
+epochs = 200
 data_augmentation = True
 
 # The data, shuffled and split between train and test sets:
@@ -49,7 +49,7 @@ opt = keras.optimizers.rmsprop(lr=0.0001, decay=1e-6)
 
 # Let's train the model using RMSprop
 model.compile(loss='categorical_crossentropy',
-              optimizer=opt,
+              optimizer='adam',
               metrics=['accuracy'])
 
 x_train = x_train.astype('float32')
